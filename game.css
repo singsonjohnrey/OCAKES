@@ -1,0 +1,88 @@
+:root{
+  --bg:#0f1724;
+  --panel: rgba(255,255,255,0.06);
+  --accent: #06b6d4;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+
+body{
+background-image: url(2.png);
+ /* background: radial-gradient(circle at 20% 10%, #071023 0%, var(--bg) 50%);*/
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#e6eef3;
+  overflow:hidden;
+}
+
+canvas#game{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:12px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.7);
+  display:block;
+}
+
+.ui{
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.scoreboard{
+  background:var(--panel);
+  padding:8px 12px;
+  border-radius:10px;
+  font-weight:600;
+  display:flex;
+  gap:16px;
+  align-items:center;
+}
+
+.controls{
+  background: var(--panel);
+  padding:8px 12px;
+  border-radius:10px;
+  font-size:13px;
+  opacity:0.9;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  pointer-events:none;
+}
+
+.overlay > *{
+  pointer-events:auto;
+}
+
+.overlay.hidden{ display:none }
+
+.overlay div, .overlay h2{
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  padding:22px 28px;
+  border-radius:14px;
+  box-shadow:0 12px 30px rgba(2,6,23,0.6);
+  text-align:center;
+  color:#fff;
+  min-width:260px;
+}
+
+#restartBtn{
+  margin-top:12px;
+  padding:10px 16px;
+  border-radius:10px;
+  border:0;
+  cursor:pointer;
+  font-weight:700;
+  background: linear-gradient(90deg, var(--accent), #38bdf8);
+  color:#042027;
+}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chasing Game</title>
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body>
+  <div class="ui">
+    <div class="scoreboard">
+      <div>Score: <span id="score">0</span></div>
+      <div>Highscore: <span id="highscore">0</span></div>
+    </div>
+    <div class="controls">Move: ← ↑ → ↓ or WASD</div>
+  </div>
+
+  <canvas id="game" width="800" height="500"></canvas>
+
+  <div class="overlay hidden" id="gameOver">
+    <h2>Game Over</h2>
+    <p>Your score: <span id="finalScore">0</span></p>
+    <button id="restartBtn">Play Again</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
